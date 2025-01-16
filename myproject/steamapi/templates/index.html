@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam tools</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <h1>Steam подсчет стоимости игр в библиотеки</h1>
+    <form id="steam-form">
+        <label for="steam-id">Вставьте ссылку на профиль Steam или SteamID:</label>
+        <input type="text" id="steam-id" name="steam-id" required>
+        <button type="submit">Подтвердить</button>
+    </form>
+    <button id="history-button">История запросов</button>
+    <div id="result">
+        <!-- Здесь будет отображаться результат запроса -->
+    </div>
+    <div id="history">
+        <!-- Здесь будет отображаться история запросов -->
+    </div>
+</body>
+</html>

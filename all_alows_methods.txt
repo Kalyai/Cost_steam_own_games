@@ -1,0 +1,446 @@
+0) IClientStats_1046930
+ReportEvent v1
+
+1) ICSGOPlayers_730
+GetNextMatchSharingCode v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the user'}, {'name': 'steamidkey', 'type': 'string', 'optional': False, 'description': 'Authentication obtained from the SteamID'}, {'name': 'knowncode', 'type': 'string', 'optional': False, 'description': 'Previously known match sharing code obtained from the SteamID'}]
+
+2) ICSGOServers_730
+GetGameMapsPlaytime v1 - [{'name': 'interval', 'type': 'string', 'optional': False, 'description': 'What recent interval is requested, possible values: day, week, month'}, {'name': 'gamemode', 'type': 'string', 'optional': False, 'description': 'What game mode is requested, possible values: competitive, casual'}, {'name': 'mapgroup', 'type': 'string', 'optional': False, 'description': 'What maps are requested, possible values: operation'}]
+
+GetGameServersStatus v1
+
+3) ICSGOTournaments_730
+GetTournamentFantasyLineup v1 - [{'name': 'event', 'type': 'uint32', 'optional': False, 'description': 'The event ID'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the user inventory'}, {'name': 'steamidkey', 'type': 'string', 'optional': False, 'description': 'Authentication obtained from the SteamID'}]
+
+GetTournamentItems v1 - [{'name': 'event', 'type': 'uint32', 'optional': False, 'description': 'The event ID'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the user inventory'}, {'name': 'steamidkey', 'type': 'string', 'optional': False, 'description': 'Authentication obtained from the SteamID'}]
+
+GetTournamentLayout v1 - [{'name': 'event', 'type': 'uint32', 'optional': False, 'description': 'The event ID'}]
+
+GetTournamentPredictions v1 - [{'name': 'event', 'type': 'uint32', 'optional': False, 'description': 'The event ID'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the user inventory'}, {'name': 'steamidkey', 'type': 'string', 'optional': False, 'description': 'Authentication obtained from the SteamID'}]
+
+UploadTournamentFantasyLineup v1 - [{'name': 'event', 'type': 'uint32', 'optional': False, 'description': 'The event ID'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the user inventory'}, {'name': 'steamidkey', 'type': 'string', 'optional': False, 'description': 'Authentication obtained from the SteamID'}, {'name': 'sectionid', 'type': 'uint32', 'optional': False, 'description': 'Event section id'}, {'name': 'pickid0', 'type': 'uint32', 'optional': False, 'description': 'PickID to select for the slot'}, {'name': 'itemid0', 'type': 'uint64', 'optional': False, 'description': 'ItemID to lock in for the pick'}, {'name': 'pickid1', 'type': 'uint32', 'optional': False, 'description': 'PickID to select for the slot'}, {'name': 'itemid1', 'type': 'uint64', 'optional': False, 'description': 'ItemID to lock in for the pick'}, {'name': 'pickid2', 'type': 'uint32', 'optional': False, 'description': 'PickID to select for the slot'}, {'name': 'itemid2', 'type': 'uint64', 'optional': False, 'description': 'ItemID to lock in for the pick'}, {'name': 'pickid3', 'type': 'uint32', 'optional': False, 'description': 'PickID to select for the slot'}, {'name': 'itemid3', 'type': 'uint64', 'optional': False, 'description': 'ItemID to lock in for the pick'}, {'name': 'pickid4', 'type': 'uint32', 'optional': False, 'description': 'PickID to select for the slot'}, {'name': 'itemid4', 'type': 'uint64', 'optional': False, 'description': 'ItemID to lock in for the pick'}]
+
+UploadTournamentPredictions v1 - [{'name': 'event', 'type': 'uint32', 'optional': False, 'description': 'The event ID'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the user inventory'}, {'name': 'steamidkey', 'type': 'string', 'optional': False, 'description': 'Authentication obtained from the SteamID'}, {'name': 'sectionid', 'type': 'uint32', 'optional': False, 'description': 'Event section id'}, {'name': 'groupid', 'type': 'uint32', 'optional': False, 'description': 'Event group id'}, {'name': 'index', 'type': 'uint32', 'optional': False, 'description': 'Index in group'}, {'name': 'pickid', 'type': 'uint32', 'optional': False, 'description': 'Pick ID to select'}, {'name': 'itemid', 'type': 'uint64', 'optional': False, 'description': 'ItemID to lock in for the pick'}]
+
+4) IDOTA2MatchStats_570
+GetRealtimeStats v1 - [{'name': 'server_steam_id', 'type': 'uint64', 'optional': False, 'description': ''}]
+
+5) IDOTA2Match_570
+GetLiveLeagueGames v1 - [{'name': 'league_id', 'type': 'uint32', 'optional': True, 'description': 'Only show matches of the specified league id'}, {'name': 'match_id', 'type': 'uint64', 'optional': True, 'description': 'Only show matches of the specified match id'}, {'name': 'dpc', 'type': 'bool', 'optional': True, 'description': 'Only show matches that are part of the DPC'}]
+
+GetMatchDetails v1 - [{'name': 'match_id', 'type': 'uint64', 'optional': False, 'description': 'Match id'}, {'name': 'include_persona_names', 'type': 'bool', 'optional': True, 'description': 'Include persona names as part of the response'}]
+
+GetMatchHistory v1 - [{'name': 'hero_id', 'type': 'uint32', 'optional': True, 'description': 'The ID of the hero that must be in the matches being queried'}, {'name': 'game_mode', 'type': 'uint32', 'optional': True, 'description': 'Which game mode to return matches for'}, {'name': 'skill', 'type': 'uint32', 'optional': True, 'description': 'The average skill range of the match, these can be [1-3] with lower numbers being lower skill. Ignored if an account ID is specified'}, {'name': 'min_players', 'type': 'string', 'optional': True, 'description': 'Minimum number of human players that must be in a match for it to be returned'}, {'name': 'account_id', 'type': 'string', 'optional': True, 'description': 'An account ID to get matches from. This will fail if the user has their match history hidden'}, {'name': 'league_id', 'type': 'string', 'optional': True, 'description': 'The league ID to return games from'}, {'name': 'start_at_match_id', 'type': 'uint64', 'optional': True, 'description': 'The minimum match ID to start from'}, {'name': 'matches_requested', 'type': 'string', 'optional': True, 'description': 'The number of requested matches to return (maximum 100)'}]
+
+GetMatchHistoryBySequenceNum v1 - [{'name': 'start_at_match_seq_num', 'type': 'uint64', 'optional': True, 'description': ''}, {'name': 'matches_requested', 'type': 'uint32', 'optional': True, 'description': ''}]
+
+GetTeamInfoByTeamID v1 - [{'name': 'start_at_team_id', 'type': 'uint64', 'optional': True, 'description': ''}, {'name': 'teams_requested', 'type': 'uint32', 'optional': True, 'description': ''}]
+
+GetTopLiveEventGame v1 - [{'name': 'partner', 'type': 'int32', 'optional': False, 'description': "Which partner's games to use."}]
+
+GetTopLiveGame v1 - [{'name': 'partner', 'type': 'int32', 'optional': False, 'description': "Which partner's games to use."}]
+
+GetTopWeekendTourneyGames v1 - [{'name': 'partner', 'type': 'int32', 'optional': False, 'description': "Which partner's games to use."}, {'name': 'home_division', 'type': 'int32', 'optional': True, 'description': 'Prefer matches from this division.'}]
+
+GetTournamentPlayerStats v1 - [{'name': 'account_id', 'type': 'string', 'optional': False, 'description': ''}, {'name': 'league_id', 'type': 'string', 'optional': True, 'description': ''}, {'name': 'hero_id', 'type': 'string', 'optional': True, 'description': ''}, {'name': 'time_frame', 'type': 'string', 'optional': True, 'description': ''}, {'name': 'match_id', 'type': 'uint64', 'optional': True, 'description': ''}]
+
+GetTournamentPlayerStats v2 - [{'name': 'account_id', 'type': 'string', 'optional': False, 'description': ''}, {'name': 'league_id', 'type': 'string', 'optional': True, 'description': ''}, {'name': 'hero_id', 'type': 'string', 'optional': True, 'description': ''}, {'name': 'time_frame', 'type': 'string', 'optional': True, 'description': ''}, {'name': 'match_id', 'type': 'uint64', 'optional': True, 'description': ''}, {'name': 'phase_id', 'type': 'uint32', 'optional': True, 'description': ''}]
+
+6) IDOTA2StreamSystem_570
+GetBroadcasterInfo v1 - [{'name': 'broadcaster_steam_id', 'type': 'uint64', 'optional': False, 'description': '64-bit Steam ID of the broadcaster'}, {'name': 'league_id', 'type': 'uint32', 'optional': True, 'description': "LeagueID to use if we aren't in a lobby"}]
+
+7) IDOTA2Ticket_570
+GetSteamIDForBadgeID v1 - [{'name': 'BadgeID', 'type': 'string', 'optional': False, 'description': 'The badge ID'}]
+
+SetSteamAccountPurchased v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The 64-bit Steam ID'}, {'name': 'BadgeType', 'type': 'uint32', 'optional': False, 'description': 'Badge Type'}]
+
+SteamAccountValidForBadgeType v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The 64-bit Steam ID'}, {'name': 'ValidBadgeType1', 'type': 'uint32', 'optional': False, 'description': 'Valid Badge Type 1'}, {'name': 'ValidBadgeType2', 'type': 'uint32', 'optional': False, 'description': 'Valid Badge Type 2'}, {'name': 'ValidBadgeType3', 'type': 'uint32', 'optional': False, 'description': 'Valid Badge Type 3'}, {'name': 'ValidBadgeType4', 'type': 'uint32', 'optional': True, 'description': 'Valid Badge Type 4'}]
+
+8) IEconDOTA2_570
+GetEventStatsForAccount v1 - [{'name': 'eventid', 'type': 'uint32', 'optional': False, 'description': "The Event ID of the event you're looking for."}, {'name': 'accountid', 'type': 'uint32', 'optional': False, 'description': 'The account ID to look up.'}, {'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to provide hero names in.'}]
+
+GetHeroes v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to provide hero names in.'}, {'name': 'itemizedonly', 'type': 'bool', 'optional': True, 'description': 'Return a list of itemized heroes only.'}]
+
+GetItemCreators v1 - [{'name': 'itemdef', 'type': 'uint32', 'optional': False, 'description': 'The item definition to get creator information for.'}]
+
+GetItemWorkshopPublishedFileIDs v1 - [{'name': 'itemdef', 'type': 'uint32', 'optional': False, 'description': 'The item definition to get published file ids for.'}]
+
+GetRarities v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to provide rarity names in.'}]
+
+GetTournamentPrizePool v1 - [{'name': 'leagueid', 'type': 'uint32', 'optional': True, 'description': 'The ID of the league to get the prize pool of'}]
+
+9) IEconItems_1046930
+GetPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}]
+
+10) IEconItems_1269260
+GetEquippedPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}, {'name': 'class_id', 'type': 'uint32', 'optional': False, 'description': 'Return items equipped for this class id'}]
+
+11) IEconItems_238460
+GetPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}]
+
+12) IEconItems_440
+GetPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}]
+
+GetSchema v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to return the names in. Defaults to returning string keys.'}]
+
+GetSchemaItems v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to return the names in. Defaults to returning string keys.'}, {'name': 'start', 'type': 'int32', 'optional': True, 'description': 'The first item id to return. Defaults to 0. Response will indicate next value to query if applicable.'}]
+
+GetSchemaOverview v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to return the names in. Defaults to returning string keys.'}]
+
+GetSchemaURL v1
+
+GetStoreMetaData v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to results in.'}]
+
+GetStoreStatus v1
+
+13) IEconItems_570
+GetPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}]
+
+GetStoreMetaData v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to results in.'}]
+
+14) IEconItems_583950
+GetEquippedPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}, {'name': 'class_id', 'type': 'uint32', 'optional': False, 'description': 'Return items equipped for this class id'}]
+
+15) IEconItems_620
+GetPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}]
+
+GetSchema v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to return the names in. Defaults to returning string keys.'}]
+
+16) IEconItems_730
+GetPlayerItems v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}]
+
+GetSchema v2 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to return the names in. Defaults to returning string keys.'}]
+
+GetSchemaURL v2
+
+GetStoreMetaData v1 - [{'name': 'language', 'type': 'string', 'optional': True, 'description': 'The language to results in.'}]
+
+17) IGCVersion_1046930
+GetClientVersion v1
+
+GetServerVersion v1
+
+18) IGCVersion_1269260
+GetClientVersion v1
+
+GetServerVersion v1
+
+19) IGCVersion_1422450
+GetClientVersion v1
+
+GetServerVersion v1
+
+20) IGCVersion_440
+GetClientVersion v1
+
+GetServerVersion v1
+
+21) IGCVersion_570
+GetClientVersion v1
+
+GetServerVersion v1
+
+22) IGCVersion_583950
+GetClientVersion v1
+
+GetServerVersion v1
+
+23) IGCVersion_730
+GetServerVersion v1
+
+24) IPortal2Leaderboards_620
+GetBucketizedData v1 - [{'name': 'leaderboardName', 'type': 'string', 'optional': False, 'description': 'The leaderboard name to fetch data for.'}]
+
+25) ISteamApps
+GetAppList v1
+
+GetAppList v2
+
+GetSDRConfig v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'AppID of game'}]
+
+GetServersAtAddress v1 - [{'name': 'addr', 'type': 'string', 'optional': False, 'description': 'IP or IP:queryport to list'}]
+
+UpToDateCheck v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'AppID of game'}, {'name': 'version', 'type': 'uint32', 'optional': False, 'description': 'The installed version of the game'}]
+
+26) ISteamBroadcast
+ViewerHeartbeat v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'Steam ID of the broadcaster'}, {'name': 'sessionid', 'type': 'uint64', 'optional': False, 'description': 'Broadcast Session ID'}, {'name': 'token', 'type': 'uint64', 'optional': False, 'description': 'Viewer token'}, {'name': 'stream', 'type': 'int32', 'optional': True, 'description': 'video stream representation watching'}]
+
+27) ISteamCDN
+SetClientFilters v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'cdnname', 'type': 'string', 'optional': False, 'description': 'Steam name of CDN property'}, {'name': 'allowedipblocks', 'type': 'string', 'optional': True, 'description': 'comma-separated list of allowed IP address blocks in CIDR format - blank for not used'}, {'name': 'allowedasns', 'type': 'string', 'optional': True, 'description': 'comma-separated list of allowed client network AS numbers - blank for not used'}, {'name': 'allowedipcountries', 'type': 'string', 'optional': True, 'description': 'comma-separated list of allowed client IP country codes in ISO 3166-1 format - blank for not used'}]
+
+SetPerformanceStats v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'cdnname', 'type': 'string', 'optional': False, 'description': 'Steam name of CDN property'}, {'name': 'mbps_sent', 'type': 'uint32', 'optional': True, 'description': 'Outgoing network traffic in Mbps'}, {'name': 'mbps_recv', 'type': 'uint32', 'optional': True, 'description': 'Incoming network traffic in Mbps'}, {'name': 'cpu_percent', 'type': 'uint32', 'optional': True, 'description': 'Percent CPU load'}, {'name': 'cache_hit_percent', 'type': 'uint32', 'optional': True, 'description': 'Percent cache hits'}]
+
+28) ISteamDirectory
+GetCMList v1 - [{'name': 'cellid', 'type': 'uint32', 'optional': False, 'description': "Client's Steam cell ID"}, {'name': 'maxcount', 'type': 'uint32', 'optional': True, 'description': 'Max number of servers to return'}]
+
+GetCMListForConnect v1 - [{'name': 'cellid', 'type': 'uint32', 'optional': True, 'description': "Client's Steam cell ID, uses IP location if blank"}, {'name': 'cmtype', 'type': 'string', 'optional': True, 'description': 'Optional CM type filter'}, {'name': 'realm', 'type': 'string', 'optional': True, 'description': 'Optional Steam Realm filter'}, {'name': 'maxcount', 'type': 'uint32', 'optional': True, 'description': 'Max number of servers to return'}, {'name': 'qoslevel', 'type': 'uint32', 'optional': True, 'description': 'Desired connection priority'}]
+
+GetSteamPipeDomains v1
+
+29) ISteamEconomy
+GetAssetClassInfo v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'Must be a steam economy app.'}, {'name': 'language', 'type': 'string', 'optional': True, 'description': "The user's local language"}, {'name': 'class_count', 'type': 'uint32', 'optional': False, 'description': 'Number of classes requested. Must be at least one.'}, {'name': 'classid0', 'type': 'uint64', 'optional': False, 'description': 'Class ID of the nth class.'}, {'name': 'instanceid0', 'type': 'uint64', 'optional': True, 'description': 'Instance ID of the nth class.'}]
+
+GetAssetPrices v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'Must be a steam economy app.'}, {'name': 'currency', 'type': 'string', 'optional': True, 'description': 'The currency to filter for'}, {'name': 'language', 'type': 'string', 'optional': True, 'description': "The user's local language"}]
+
+30) ISteamNews
+GetNewsForApp v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'AppID to retrieve news for'}, {'name': 'maxlength', 'type': 'uint32', 'optional': True, 'description': "Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit."}, {'name': 'enddate', 'type': 'uint32', 'optional': True, 'description': 'Retrieve posts earlier than this date (unix epoch timestamp)'}, {'name': 'count', 'type': 'uint32', 'optional': True, 'description': '# of posts to retrieve (default 20)'}, {'name': 'tags', 'type': 'string', 'optional': True, 'description': "Comma-separated list of tags to filter by (e.g. 'patchnodes')"}]
+
+GetNewsForApp v2 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'AppID to retrieve news for'}, {'name': 'maxlength', 'type': 'uint32', 'optional': True, 'description': "Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit."}, {'name': 'enddate', 'type': 'uint32', 'optional': True, 'description': 'Retrieve posts earlier than this date (unix epoch timestamp)'}, {'name': 'count', 'type': 'uint32', 'optional': True, 'description': '# of posts to retrieve (default 20)'}, {'name': 'feeds', 'type': 'string', 'optional': True, 'description': 'Comma-separated list of feed names to return news for'}, {'name': 'tags', 'type': 'string', 'optional': True, 'description': "Comma-separated list of tags to filter by (e.g. 'patchnodes')"}]
+
+31) ISteamRemoteStorage
+GetCollectionDetails v1 - [{'name': 'collectioncount', 'type': 'uint32', 'optional': False, 'description': 'Number of collections being requested'}, {'name': 'publishedfileids[0]', 'type': 'uint64', 'optional': False, 'description': 'collection ids to get the details for'}]
+
+GetPublishedFileDetails v1 - [{'name': 'itemcount', 'type': 'uint32', 'optional': False, 'description': 'Number of items being requested'}, {'name': 'publishedfileids[0]', 'type': 'uint64', 'optional': False, 'description': 'published file id to look up'}]
+
+GetUGCFileDetails v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': True, 'description': 'If specified, only returns details if the file is owned by the SteamID specified'}, {'name': 'ugcid', 'type': 'uint64', 'optional': False, 'description': 'ID of UGC file to get info for'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'appID of product'}]
+
+32) ISteamUser
+GetFriendList v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'SteamID of user'}, {'name': 'relationship', 'type': 'string', 'optional': True, 'description': 'relationship type (ex: friend)'}]
+
+GetPlayerBans v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamids', 'type': 'string', 'optional': False, 'description': 'Comma-delimited list of SteamIDs'}]
+
+GetPlayerSummaries v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamids', 'type': 'string', 'optional': False, 'description': 'Comma-delimited list of SteamIDs'}]
+
+GetPlayerSummaries v2 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamids', 'type': 'string', 'optional': False, 'description': 'Comma-delimited list of SteamIDs (max: 100)'}]
+
+GetUserGroupList v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'SteamID of user'}]
+
+ResolveVanityURL v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'vanityurl', 'type': 'string', 'optional': False, 'description': 'The vanity URL to get a SteamID for'}, {'name': 'url_type', 'type': 'int32', 'optional': True, 'description': 'The type of vanity URL. 1 (default): Individual profile, 2: Group, 3: Official game group'}]
+
+33) ISteamUserAuth
+AuthenticateUserTicket v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'appid of game'}, {'name': 'ticket', 'type': 'string', 'optional': False, 'description': 'Ticket from GetAuthSessionTicket.'}]
+
+34) ISteamUserOAuth
+GetTokenDetails v1 - [{'name': 'access_token', 'type': 'string', 'optional': False, 'description': 'OAuth2 token for which to return details'}]
+
+35) ISteamUserStats
+GetGlobalAchievementPercentagesForApp v1 - [{'name': 'gameid', 'type': 'uint64', 'optional': False, 'description': 'GameID to retrieve the achievement percentages for'}]
+
+GetGlobalAchievementPercentagesForApp v2 - [{'name': 'gameid', 'type': 'uint64', 'optional': False, 'description': 'GameID to retrieve the achievement percentages for'}]
+
+GetGlobalStatsForGame v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': "AppID that we're getting global stats for"}, {'name': 'count', 'type': 'uint32', 'optional': False, 'description': 'Number of stats get data for'}, {'name': 'name[0]', 'type': 'string', 'optional': False, 'description': 'Names of stat to get data for'}, {'name': 'startdate', 'type': 'uint32', 'optional': True, 'description': 'Start date for daily totals (unix epoch timestamp)'}, {'name': 'enddate', 'type': 'uint32', 'optional': True, 'description': 'End date for daily totals (unix epoch timestamp)'}]
+
+GetNumberOfCurrentPlayers v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': "AppID that we're getting user count for"}]
+
+GetPlayerAchievements v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'SteamID of user'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'AppID to get achievements for'}, {'name': 'l', 'type': 'string', 'optional': True, 'description': 'Language to return strings for'}]
+
+GetSchemaForGame v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'appid of game'}, {'name': 'l', 'type': 'string', 'optional': True, 'description': 'localized langauge to return (english, french, etc.)'}]
+
+GetSchemaForGame v2 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'appid of game'}, {'name': 'l', 'type': 'string', 'optional': True, 'description': 'localized language to return (english, french, etc.)'}]
+
+GetUserStatsForGame v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'SteamID of user'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'appid of game'}]
+
+GetUserStatsForGame v2 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'SteamID of user'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'appid of game'}]
+
+36) ISteamWebAPIUtil
+GetServerInfo v1
+
+GetSupportedAPIList v1 - [{'name': 'key', 'type': 'string', 'optional': True, 'description': 'access key'}]
+
+37) ITFItems_440
+GetGoldenWrenches v1
+
+GetGoldenWrenches v2
+
+38) ITFPromos_440
+GetItemID v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}, {'name': 'promoid', 'type': 'uint32', 'optional': False, 'description': 'The promo ID to grant an item for'}]
+
+GrantItem v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}, {'name': 'promoid', 'type': 'uint32', 'optional': False, 'description': 'The promo ID to grant an item for'}]
+
+39) ITFPromos_620
+GetItemID v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}, {'name': 'PromoID', 'type': 'uint32', 'optional': False, 'description': 'The promo ID to grant an item for'}]
+
+GrantItem v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The Steam ID to fetch items for'}, {'name': 'PromoID', 'type': 'uint32', 'optional': False, 'description': 'The promo ID to grant an item for'}]
+
+40) ITFSystem_440
+GetWorldStatus v1
+
+41) IGameServersService
+GetAccountList v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}]
+Gets a list of game server accounts with their logon tokens
+
+CreateAccount v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'The app to use the account for'}, {'name': 'memo', 'type': 'string', 'optional': False, 'description': 'The memo to set on the new account'}]
+Creates a persistent game server account
+
+SetMemo v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the game server to set the memo on'}, {'name': 'memo', 'type': 'string', 'optional': False, 'description': 'The memo to set on the new account'}]
+This method changes the memo associated with the game server account. Memos do not affect the account in any way. The memo shows up in the GetAccountList response and serves only as a reminder of what the account is used for.
+
+ResetLoginToken v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the game server to reset the login token of'}]
+Generates a new login token for the specified game server
+
+DeleteAccount v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the game server account to delete'}]
+Deletes a persistent game server account
+
+GetAccountPublicInfo v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'The SteamID of the game server to get info on'}]
+Gets public information about a given game server account
+
+QueryLoginToken v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'login_token', 'type': 'string', 'optional': False, 'description': 'Login token to query'}]
+Queries the status of the specified token, which must be owned by you
+
+GetServerSteamIDsByIP v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'server_ips', 'type': 'string', 'optional': False}]
+Gets a list of server SteamIDs given a list of IPs
+
+GetServerIPsBySteamID v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'server_steamids', 'type': 'uint64', 'optional': False}]
+Gets a list of server IP addresses given a list of SteamIDs
+
+QueryByFakeIP v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'fake_ip', 'type': 'uint32', 'optional': False, 'description': 'FakeIP of server to query.'}, {'name': 'fake_port', 'type': 'uint32', 'optional': False, 'description': 'Fake port of server to query.'}, {'name': 'app_id', 'type': 'uint32', 'optional': False, 'description': 'AppID to use.  Each AppID has its own FakeIP address.'}, {'name': 'query_type', 'type': '{enum}', 'optional': False, 'description': 'What type of query?'}]
+Perform a query on a specific server by FakeIP
+
+42) IPlayerService
+IsPlayingSharedGame v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': "The player we're asking about"}, {'name': 'appid_playing', 'type': 'uint32', 'optional': False, 'description': 'The game player is currently playing'}]
+Obsolete, partners should use ISteamUser.CheckAppOwnership
+
+RecordOfflinePlaytime v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False}, {'name': 'ticket', 'type': 'string', 'optional': False}, {'name': 'play_sessions', 'type': '{message}', 'optional': False}]
+Tracks playtime for a user when they are offline
+
+GetRecentlyPlayedGames v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': "The player we're asking about"}, {'name': 'count', 'type': 'uint32', 'optional': False, 'description': 'The number of games to return (0/unset: all)'}]
+Gets information about a player's recently played games
+
+GetOwnedGames v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': "The player we're asking about"}, {'name': 'include_appinfo', 'type': 'bool', 'optional': False, 'description': 'true if we want additional details (name, icon) about each game'}, {'name': 'include_played_free_games', 'type': 'bool', 'optional': False, 'description': 'Free games are excluded by default.  If this is set, free games the user has played will be returned.'}, {'name': 'appids_filter', 'type': 'uint32', 'optional': False, 'description': 'if set, restricts result set to the passed in apps'}, {'name': 'include_free_sub', 'type': 'bool', 'optional': False, 'description': 'Some games are in the free sub, which are excluded by default.'}, {'name': 'skip_unvetted_apps', 'type': 'bool', 'optional': True, 'description': 'if set, skip unvetted store apps'}, {'name': 'language', 'type': 'string', 'optional': False, 'description': 'Will return appinfo in this language'}, {'name': 'include_extended_appinfo', 'type': 'bool', 'optional': False, 'description': 'true if we want even more details (capsule, sortas, and capabilities) about each game.  include_appinfo must also be true.'}]
+Return a list of games owned by the player
+
+GetSteamLevel v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': "The player we're asking about"}]
+Returns the Steam Level of a user
+
+GetBadges v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': "The player we're asking about"}]
+Gets badges that are owned by a specific user
+
+GetCommunityBadgeProgress v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': "The player we're asking about"}, {'name': 'badgeid', 'type': 'int32', 'optional': False, 'description': "The badge we're asking about"}]
+Gets all the quests needed to get the specified badge, and which are completed
+
+43) IAuthenticationService
+PollAuthSessionStatus v1 - [{'name': 'client_id', 'type': 'uint64', 'optional': False}, {'name': 'request_id', 'type': 'string', 'optional': False}, {'name': 'token_to_revoke', 'type': 'uint64', 'optional': False, 'description': 'If this is set to a token owned by this user, that token will be retired'}]
+poll during authentication process
+
+GetAuthSessionInfo v1 - [{'name': 'client_id', 'type': 'uint64', 'optional': False, 'description': 'client ID from scanned QR Code, used for routing'}]
+get metadata of specific auth session, this will also implicitly bind the calling account
+
+GetAuthSessionRiskInfo v1 - [{'name': 'client_id', 'type': 'uint64', 'optional': False, 'description': 'client ID from scanned QR Code, used for routing'}, {'name': 'language', 'type': 'uint32', 'optional': False, 'description': 'language for optimistic localization of geoloc data'}]
+get risk metadata for a specific auth session that has been deemed risky
+
+NotifyRiskQuizResults v1 - [{'name': 'client_id', 'type': 'uint64', 'optional': False, 'description': 'client ID for the auth session, used for routing'}, {'name': 'results', 'type': '{message}', 'optional': False, 'description': 'Whether or not the user correctly answered each risk quiz question'}, {'name': 'selected_action', 'type': 'string', 'optional': False, 'description': 'The action being taken selected by the user during the quiz'}, {'name': 'did_confirm_login', 'type': 'bool', 'optional': False, 'description': 'Whether or not the user went on to confirm the login or not in the case of a passed quiz'}]
+notify the server about risk quiz responses for metrics purposes
+
+GetPasswordRSAPublicKey v1 - [{'name': 'account_name', 'type': 'string', 'optional': False, 'description': 'user-provided account name to get an RSA key for'}]
+Fetches RSA public key to use to encrypt passwords for a given account name
+
+BeginAuthSessionViaCredentials v1 - [{'name': 'device_friendly_name', 'type': 'string', 'optional': False}, {'name': 'account_name', 'type': 'string', 'optional': False}, {'name': 'encrypted_password', 'type': 'string', 'optional': False, 'description': 'password, RSA encrypted client side'}, {'name': 'encryption_timestamp', 'type': 'uint64', 'optional': False, 'description': 'timestamp to map to a key - STime'}, {'name': 'remember_login', 'type': 'bool', 'optional': False, 'description': 'deprecated'}, {'name': 'platform_type', 'type': '{enum}', 'optional': False}, {'name': 'persistence', 'type': '{enum}', 'optional': True, 'description': 'whether we are requesting a persistent or an ephemeral session'}, {'name': 'website_id', 'type': 'string', 'optional': True, 'description': '(EMachineAuthWebDomain) identifier of client requesting auth'}, {'name': 'device_details', 'type': '{message}', 'optional': False, 'description': 'User-supplied details about the device attempting to sign in'}, {'name': 'guard_data', 'type': 'string', 'optional': False, 'description': 'steam guard data for client login'}, {'name': 'language', 'type': 'uint32', 'optional': False}, {'name': 'qos_level', 'type': 'int32', 'optional': True, 'description': '[ENetQOSLevel] client-specified priority for this auth attempt'}]
+start authentication process
+
+UpdateAuthSessionWithSteamGuardCode v1 - [{'name': 'client_id', 'type': 'uint64', 'optional': False, 'description': 'pending client ID, from initialized session'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'user who wants to login'}, {'name': 'code', 'type': 'string', 'optional': False, 'description': 'confirmation code'}, {'name': 'code_type', 'type': '{enum}', 'optional': False, 'description': 'type of confirmation code'}]
+approve an authentication session via steam guard code
+
+BeginAuthSessionViaQR v1 - [{'name': 'device_friendly_name', 'type': 'string', 'optional': False}, {'name': 'platform_type', 'type': '{enum}', 'optional': False}, {'name': 'device_details', 'type': '{message}', 'optional': False, 'description': 'User-supplied details about the device attempting to sign in'}, {'name': 'website_id', 'type': 'string', 'optional': True, 'description': '(EMachineAuthWebDomain) identifier of client requesting auth'}]
+start authentication process
+
+UpdateAuthSessionWithMobileConfirmation v1 - [{'name': 'version', 'type': 'int32', 'optional': False, 'description': 'version field'}, {'name': 'client_id', 'type': 'uint64', 'optional': False, 'description': 'pending client ID, from scanned QR Code'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'user who wants to login'}, {'name': 'signature', 'type': 'string', 'optional': False, 'description': "HMAC digest over {version,client_id,steamid} via user's private key"}, {'name': 'confirm', 'type': 'bool', 'optional': True, 'description': 'Whether to confirm the login (true) or deny the login (false)'}, {'name': 'persistence', 'type': '{enum}', 'optional': True, 'description': 'whether we are requesting a persistent or an ephemeral session'}]
+approve an authentication session via mobile 2fa
+
+44) IBroadcastService
+PostGameDataFrameRTMP v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'AppID of the game being broadcasted'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'Broadcasters SteamID'}, {'name': 'rtmp_token', 'type': 'string', 'optional': False, 'description': 'Valid RTMP token for the Broadcaster'}, {'name': 'frame_data', 'type': 'string', 'optional': False, 'description': 'game data frame expressing current state of game (string, zipped, whatever)'}]
+Add a game meta data frame to broadcast from a client. Uses RTMP token for validation
+
+45) IContentServerConfigService
+SetSteamCacheClientFilters v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'cache_id', 'type': 'uint32', 'optional': False, 'description': 'Unique ID number'}, {'name': 'cache_key', 'type': 'string', 'optional': False, 'description': 'Valid current cache API key'}, {'name': 'change_notes', 'type': 'string', 'optional': False, 'description': 'Notes'}, {'name': 'allowed_ip_blocks', 'type': 'string', 'optional': False, 'description': 'comma-separated list of allowed IP address blocks in CIDR format - blank to clear unfilter'}]
+Update the client filters for a SteamCache node
+
+GetSteamCacheNodeParams v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'cache_id', 'type': 'uint32', 'optional': False, 'description': 'Unique ID number'}, {'name': 'cache_key', 'type': 'string', 'optional': False, 'description': 'Valid current cache API key'}]
+Get the operational parameters for a SteamCache node (information the node uses to operate).
+
+SetSteamCachePerformanceStats v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'cache_id', 'type': 'uint32', 'optional': False, 'description': 'Unique ID number'}, {'name': 'cache_key', 'type': 'string', 'optional': False, 'description': 'Valid current cache API key'}, {'name': 'mbps_sent', 'type': 'uint32', 'optional': False, 'description': 'Outgoing network traffic in Mbps'}, {'name': 'mbps_recv', 'type': 'uint32', 'optional': False, 'description': 'Incoming network traffic in Mbps'}, {'name': 'cpu_percent', 'type': 'uint32', 'optional': False, 'description': 'Percent CPU load'}, {'name': 'cache_hit_percent', 'type': 'uint32', 'optional': False, 'description': 'Percent cache hits'}, {'name': 'num_connected_ips', 'type': 'uint32', 'optional': False, 'description': 'Number of unique connected IP addresses'}, {'name': 'upstream_egress_utilization', 'type': 'uint32', 'optional': False, 'description': '(deprecated) What is the percent utilization of the busiest datacenter egress link?'}, {'name': 'upstream_peering_utilization', 'type': 'uint32', 'optional': False, 'description': 'What is the percent utilization of the busiest peering link?'}, {'name': 'upstream_transit_utilization', 'type': 'uint32', 'optional': False, 'description': 'What is the percent utilization of the busiest transit link?'}]
+Update the performance/load stats for a SteamCache node
+
+46) IContentServerDirectoryService
+GetCDNForVideo v1 - [{'name': 'property_type', 'type': 'int32', 'optional': False, 'description': 'ECDNPropertyType'}, {'name': 'client_ip', 'type': 'string', 'optional': False, 'description': 'client IP address'}, {'name': 'client_region', 'type': 'string', 'optional': False, 'description': 'client region'}]
+
+PickSingleContentServer v1 - [{'name': 'property_type', 'type': 'int32', 'optional': False, 'description': 'ECDNPropertyType'}, {'name': 'cell_id', 'type': 'uint32', 'optional': False, 'description': 'client Cell ID'}, {'name': 'client_ip', 'type': 'string', 'optional': False, 'description': 'client IP address'}]
+
+GetServersForSteamPipe v1 - [{'name': 'cell_id', 'type': 'uint32', 'optional': False, 'description': 'client Cell ID'}, {'name': 'max_servers', 'type': 'uint32', 'optional': True, 'description': 'max servers in response list'}, {'name': 'ip_override', 'type': 'string', 'optional': True, 'description': 'client IP address'}, {'name': 'launcher_type', 'type': 'int32', 'optional': True, 'description': 'launcher type'}, {'name': 'ipv6_public', 'type': 'string', 'optional': True, 'description': 'client public ipv6 address if it knows it'}, {'name': 'current_connections', 'type': '{message}', 'optional': False, 'description': 'what sources is the client currently using'}]
+
+GetClientUpdateHosts v1 - [{'name': 'cached_signature', 'type': 'string', 'optional': False}]
+
+GetDepotPatchInfo v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False}, {'name': 'depotid', 'type': 'uint32', 'optional': False}, {'name': 'source_manifestid', 'type': 'uint64', 'optional': False}, {'name': 'target_manifestid', 'type': 'uint64', 'optional': False}]
+
+47) IPublishedFileService
+GetUserVoteSummary v1 - [{'name': 'publishedfileids', 'type': 'uint64', 'optional': False}]
+Get user vote summary
+
+QueryFiles v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'query_type', 'type': 'uint32', 'optional': False, 'description': 'enumeration EPublishedFileQueryType in clientenums.h'}, {'name': 'page', 'type': 'uint32', 'optional': False, 'description': 'Current page'}, {'name': 'cursor', 'type': 'string', 'optional': False, 'description': "Cursor to paginate through the results (set to '*' for the first request).  Prefer this over using the page parameter, as it will allow you to do deep pagination.  When used, the page parameter will be ignored."}, {'name': 'numperpage', 'type': 'uint32', 'optional': True, 'description': '(Optional) The number of results, per page to return.'}, {'name': 'creator_appid', 'type': 'uint32', 'optional': False, 'description': 'App that created the files'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'App that consumes the files'}, {'name': 'requiredtags', 'type': 'string', 'optional': False, 'description': 'Tags to match on. See match_all_tags parameter below'}, {'name': 'excludedtags', 'type': 'string', 'optional': False, 'description': '(Optional) Tags that must NOT be present on a published file to satisfy the query.'}, {'name': 'match_all_tags', 'type': 'bool', 'optional': True, 'description': 'If true, then items must have all the tags specified, otherwise they must have at least one of the tags.'}, {'name': 'required_flags', 'type': 'string', 'optional': False, 'description': 'Required flags that must be set on any returned items'}, {'name': 'omitted_flags', 'type': 'string', 'optional': False, 'description': 'Flags that must not be set on any returned items'}, {'name': 'search_text', 'type': 'string', 'optional': False, 'description': "Text to match in the item's title or description"}, {'name': 'filetype', 'type': 'uint32', 'optional': False, 'description': 'EPublishedFileInfoMatchingFileType'}, {'name': 'child_publishedfileid', 'type': 'uint64', 'optional': False, 'description': 'Find all items that reference the given item.'}, {'name': 'days', 'type': 'uint32', 'optional': False, 'description': 'If query_type is k_PublishedFileQueryType_RankedByTrend, then this is the number of days to get votes for [1,7].'}, {'name': 'include_recent_votes_only', 'type': 'bool', 'optional': False, 'description': 'If query_type is k_PublishedFileQueryType_RankedByTrend, then limit result set just to items that have votes within the day range given'}, {'name': 'cache_max_age_seconds', 'type': 'uint32', 'optional': True, 'description': 'Allow stale data to be returned for the specified number of seconds.'}, {'name': 'language', 'type': 'int32', 'optional': True, 'description': 'Language to search in and also what gets returned. Defaults to English.'}, {'name': 'required_kv_tags', 'type': '{message}', 'optional': False, 'description': 'Required key-value tags to match on.'}, {'name': 'taggroups', 'type': '{message}', 'optional': False, 'description': '(Optional) At least one of the tags must be present on a published file to satisfy the query.'}, {'name': 'date_range_created', 'type': '{message}', 'optional': False, 'description': '(Optional) Filter to items created within this range.'}, {'name': 'date_range_updated', 'type': '{message}', 'optional': False, 'description': '(Optional) Filter to items updated within this range.'}, {'name': 'excluded_content_descriptors', 'type': '{enum}', 'optional': False, 'description': '(Optional) Filter out items that have these content descriptors.'}, {'name': 'admin_query', 'type': 'bool', 'optional': False, 'description': 'Admin tool is doing a query, return hidden items'}, {'name': 'totalonly', 'type': 'bool', 'optional': False, 'description': '(Optional) If true, only return the total number of files that satisfy this query.'}, {'name': 'ids_only', 'type': 'bool', 'optional': False, 'description': '(Optional) If true, only return the published file ids of files that satisfy this query.'}, {'name': 'return_vote_data', 'type': 'bool', 'optional': False, 'description': 'Return vote data'}, {'name': 'return_tags', 'type': 'bool', 'optional': False, 'description': 'Return tags in the file details'}, {'name': 'return_kv_tags', 'type': 'bool', 'optional': False, 'description': 'Return key-value tags in the file details'}, {'name': 'return_previews', 'type': 'bool', 'optional': False, 'description': 'Return preview image and video details in the file details'}, {'name': 'return_children', 'type': 'bool', 'optional': False, 'description': 'Return child item ids in the file details'}, {'name': 'return_short_description', 'type': 'bool', 'optional': False, 'description': 'Populate the short_description field instead of file_description'}, {'name': 'return_for_sale_data', 'type': 'bool', 'optional': False, 'description': 'Return pricing information, if applicable'}, {'name': 'return_metadata', 'type': 'bool', 'optional': True, 'description': 'Populate the metadata'}, {'name': 'return_playtime_stats', 'type': 'uint32', 'optional': False, 'description': 'Return playtime stats for the specified number of days before today.'}, {'name': 'return_details', 'type': 'bool', 'optional': False, 'description': "By default, if none of the other 'return_*' fields are set, only some voting details are returned. Set this to true to return the default set of details."}, {'name': 'strip_description_bbcode', 'type': 'bool', 'optional': False, 'description': 'Strips BBCode from descriptions.'}, {'name': 'desired_revision', 'type': '{enum}', 'optional': True, 'description': 'Return the data for the specified revision.'}, {'name': 'return_reactions', 'type': 'bool', 'optional': True, 'description': 'If true, then reactions to items will be returned.'}]
+Performs a search query for published files
+
+GetSubSectionData v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'publishedfileid', 'type': 'uint64', 'optional': False}, {'name': 'for_table_of_contents', 'type': 'bool', 'optional': False}, {'name': 'specific_sectionid', 'type': 'uint64', 'optional': False}, {'name': 'desired_revision', 'type': '{enum}', 'optional': True, 'description': 'Return the data for the specified revision.'}]
+Get sub section data (for table of contents, a specific section, or all)
+
+GetDetails v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'publishedfileids', 'type': 'uint64', 'optional': False, 'description': 'Set of published file Ids to retrieve details for.'}, {'name': 'includetags', 'type': 'bool', 'optional': False, 'description': 'If true, return tag information in the returned details.'}, {'name': 'includeadditionalpreviews', 'type': 'bool', 'optional': False, 'description': 'If true, return preview information in the returned details.'}, {'name': 'includechildren', 'type': 'bool', 'optional': False, 'description': 'If true, return children in the returned details.'}, {'name': 'includekvtags', 'type': 'bool', 'optional': False, 'description': 'If true, return key value tags in the returned details.'}, {'name': 'includevotes', 'type': 'bool', 'optional': False, 'description': 'If true, return vote data in the returned details.'}, {'name': 'short_description', 'type': 'bool', 'optional': False, 'description': 'If true, return a short description instead of the full description.'}, {'name': 'includeforsaledata', 'type': 'bool', 'optional': False, 'description': 'If true, return pricing data, if applicable.'}, {'name': 'includemetadata', 'type': 'bool', 'optional': False, 'description': 'If true, populate the metadata field.'}, {'name': 'language', 'type': 'int32', 'optional': True, 'description': 'Specifies the localized text to return. Defaults to English.'}, {'name': 'return_playtime_stats', 'type': 'uint32', 'optional': False, 'description': 'Return playtime stats for the specified number of days before today.'}, {'name': 'appid', 'type': 'uint32', 'optional': False}, {'name': 'strip_description_bbcode', 'type': 'bool', 'optional': False, 'description': 'Strips BBCode from descriptions.'}, {'name': 'desired_revision', 'type': '{enum}', 'optional': True, 'description': 'Return the data for the specified revision.'}, {'name': 'includereactions', 'type': 'bool', 'optional': True, 'description': 'If true, then reactions to items will be returned.'}, {'name': 'admin_query', 'type': 'bool', 'optional': False, 'description': 'Admin tool is doing a query, return hidden items'}]
+Retrieves information about a set of published files.
+
+GetUserFiles v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'Steam ID of the user whose files are being requested.'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'App Id of the app that the files were published to.'}, {'name': 'shortcutid', 'type': 'uint32', 'optional': False, 'description': '(Optional) Shortcut Id to retrieve published files from.'}, {'name': 'page', 'type': 'uint32', 'optional': True, 'description': '(Optional) Starting page for results.'}, {'name': 'numperpage', 'type': 'uint32', 'optional': True, 'description': '(Optional) The number of results, per page to return.'}, {'name': 'type', 'type': 'string', 'optional': True, 'description': '(Optional) Type of files to be returned.'}, {'name': 'sortmethod', 'type': 'string', 'optional': True, 'description': '(Optional) Sorting method to use on returned values.'}, {'name': 'privacy', 'type': 'uint32', 'optional': False, 'description': '(optional) Filter by privacy settings.'}, {'name': 'requiredtags', 'type': 'string', 'optional': False, 'description': '(Optional) Tags that must be present on a published file to satisfy the query.'}, {'name': 'excludedtags', 'type': 'string', 'optional': False, 'description': '(Optional) Tags that must NOT be present on a published file to satisfy the query.'}, {'name': 'required_kv_tags', 'type': '{message}', 'optional': False, 'description': 'Required key-value tags to match on.'}, {'name': 'filetype', 'type': 'uint32', 'optional': False, 'description': '(Optional) File type to match files to.'}, {'name': 'creator_appid', 'type': 'uint32', 'optional': False, 'description': 'App Id of the app that published the files, only matched if specified.'}, {'name': 'match_cloud_filename', 'type': 'string', 'optional': False, 'description': 'Match this cloud filename if specified.'}, {'name': 'cache_max_age_seconds', 'type': 'uint32', 'optional': True, 'description': 'Allow stale data to be returned for the specified number of seconds.'}, {'name': 'language', 'type': 'int32', 'optional': True, 'description': 'Specifies the localized text to return. Defaults to English.'}, {'name': 'taggroups', 'type': '{message}', 'optional': False, 'description': '(Optional) At least one of the tags must be present on a published file to satisfy the query.'}, {'name': 'excluded_content_descriptors', 'type': '{enum}', 'optional': False, 'description': '(Optional) Filter out items that have these content descriptors.'}, {'name': 'admin_query', 'type': 'bool', 'optional': False, 'description': 'Admin tool is doing a query, return hidden items'}, {'name': 'totalonly', 'type': 'bool', 'optional': False, 'description': '(Optional) If true, only return the total number of files that satisfy this query.'}, {'name': 'ids_only', 'type': 'bool', 'optional': False, 'description': '(Optional) If true, only return the published file ids of files that satisfy this query.'}, {'name': 'return_vote_data', 'type': 'bool', 'optional': True, 'description': 'Return vote data'}, {'name': 'return_tags', 'type': 'bool', 'optional': False, 'description': 'Return tags in the file details'}, {'name': 'return_kv_tags', 'type': 'bool', 'optional': True, 'description': 'Return key-value tags in the file details'}, {'name': 'return_previews', 'type': 'bool', 'optional': False, 'description': 'Return preview image and video details in the file details'}, {'name': 'return_children', 'type': 'bool', 'optional': False, 'description': 'Return child item ids in the file details'}, {'name': 'return_short_description', 'type': 'bool', 'optional': True, 'description': 'Populate the short_description field instead of file_description'}, {'name': 'return_for_sale_data', 'type': 'bool', 'optional': False, 'description': 'Return pricing information, if applicable'}, {'name': 'return_metadata', 'type': 'bool', 'optional': True, 'description': 'Populate the metadata field'}, {'name': 'return_playtime_stats', 'type': 'uint32', 'optional': False, 'description': 'Return playtime stats for the specified number of days before today.'}, {'name': 'strip_description_bbcode', 'type': 'bool', 'optional': False, 'description': 'Strips BBCode from descriptions.'}, {'name': 'return_reactions', 'type': 'bool', 'optional': True, 'description': 'If true, then reactions to items will be returned.'}, {'name': 'startindex_override', 'type': 'uint32', 'optional': False, 'description': 'Backwards compatible for the client.'}, {'name': 'desired_revision', 'type': '{enum}', 'optional': True, 'description': 'Return the data for the specified revision.'}, {'name': 'return_apps', 'type': 'bool', 'optional': False, 'description': 'Return list of apps the items belong to'}]
+Retrieves files published by a user.
+
+GetUserFileCount v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'Steam ID of the user whose files are being requested.'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'App Id of the app that the files were published to.'}, {'name': 'shortcutid', 'type': 'uint32', 'optional': False, 'description': '(Optional) Shortcut Id to retrieve published files from.'}, {'name': 'page', 'type': 'uint32', 'optional': True, 'description': '(Optional) Starting page for results.'}, {'name': 'numperpage', 'type': 'uint32', 'optional': True, 'description': '(Optional) The number of results, per page to return.'}, {'name': 'type', 'type': 'string', 'optional': True, 'description': '(Optional) Type of files to be returned.'}, {'name': 'sortmethod', 'type': 'string', 'optional': True, 'description': '(Optional) Sorting method to use on returned values.'}, {'name': 'privacy', 'type': 'uint32', 'optional': False, 'description': '(optional) Filter by privacy settings.'}, {'name': 'requiredtags', 'type': 'string', 'optional': False, 'description': '(Optional) Tags that must be present on a published file to satisfy the query.'}, {'name': 'excludedtags', 'type': 'string', 'optional': False, 'description': '(Optional) Tags that must NOT be present on a published file to satisfy the query.'}, {'name': 'required_kv_tags', 'type': '{message}', 'optional': False, 'description': 'Required key-value tags to match on.'}, {'name': 'filetype', 'type': 'uint32', 'optional': False, 'description': '(Optional) File type to match files to.'}, {'name': 'creator_appid', 'type': 'uint32', 'optional': False, 'description': 'App Id of the app that published the files, only matched if specified.'}, {'name': 'match_cloud_filename', 'type': 'string', 'optional': False, 'description': 'Match this cloud filename if specified.'}, {'name': 'cache_max_age_seconds', 'type': 'uint32', 'optional': True, 'description': 'Allow stale data to be returned for the specified number of seconds.'}, {'name': 'language', 'type': 'int32', 'optional': True, 'description': 'Specifies the localized text to return. Defaults to English.'}, {'name': 'taggroups', 'type': '{message}', 'optional': False, 'description': '(Optional) At least one of the tags must be present on a published file to satisfy the query.'}, {'name': 'excluded_content_descriptors', 'type': '{enum}', 'optional': False, 'description': '(Optional) Filter out items that have these content descriptors.'}, {'name': 'admin_query', 'type': 'bool', 'optional': False, 'description': 'Admin tool is doing a query, return hidden items'}, {'name': 'totalonly', 'type': 'bool', 'optional': False, 'description': '(Optional) If true, only return the total number of files that satisfy this query.'}, {'name': 'ids_only', 'type': 'bool', 'optional': False, 'description': '(Optional) If true, only return the published file ids of files that satisfy this query.'}, {'name': 'return_vote_data', 'type': 'bool', 'optional': True, 'description': 'Return vote data'}, {'name': 'return_tags', 'type': 'bool', 'optional': False, 'description': 'Return tags in the file details'}, {'name': 'return_kv_tags', 'type': 'bool', 'optional': True, 'description': 'Return key-value tags in the file details'}, {'name': 'return_previews', 'type': 'bool', 'optional': False, 'description': 'Return preview image and video details in the file details'}, {'name': 'return_children', 'type': 'bool', 'optional': False, 'description': 'Return child item ids in the file details'}, {'name': 'return_short_description', 'type': 'bool', 'optional': True, 'description': 'Populate the short_description field instead of file_description'}, {'name': 'return_for_sale_data', 'type': 'bool', 'optional': False, 'description': 'Return pricing information, if applicable'}, {'name': 'return_metadata', 'type': 'bool', 'optional': True, 'description': 'Populate the metadata field'}, {'name': 'return_playtime_stats', 'type': 'uint32', 'optional': False, 'description': 'Return playtime stats for the specified number of days before today.'}, {'name': 'strip_description_bbcode', 'type': 'bool', 'optional': False, 'description': 'Strips BBCode from descriptions.'}, {'name': 'return_reactions', 'type': 'bool', 'optional': True, 'description': 'If true, then reactions to items will be returned.'}, {'name': 'startindex_override', 'type': 'uint32', 'optional': False, 'description': 'Backwards compatible for the client.'}, {'name': 'desired_revision', 'type': '{enum}', 'optional': True, 'description': 'Return the data for the specified revision.'}, {'name': 'return_apps', 'type': 'bool', 'optional': False, 'description': 'Return list of apps the items belong to'}]
+Retrieves a count of files published by a user. Uses the same messages as GetUserFiles but totalonly must be true.
+
+48) IEconService
+GetTradeHistory v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'max_trades', 'type': 'uint32', 'optional': False, 'description': 'The number of trades to return information for'}, {'name': 'start_after_time', 'type': 'uint32', 'optional': False, 'description': 'The time of the last trade shown on the previous page of results, or the time of the first trade if navigating back'}, {'name': 'start_after_tradeid', 'type': 'uint64', 'optional': False, 'description': 'The tradeid shown on the previous page of results, or the ID of the first trade if navigating back'}, {'name': 'navigating_back', 'type': 'bool', 'optional': False, 'description': 'The user wants the previous page of results, so return the previous max_trades trades before the start time and ID'}, {'name': 'get_descriptions', 'type': 'bool', 'optional': False, 'description': 'If set, the item display data for the items included in the returned trades will also be returned'}, {'name': 'language', 'type': 'string', 'optional': False, 'description': 'The language to use when loading item display data'}, {'name': 'include_failed', 'type': 'bool', 'optional': False}, {'name': 'include_total', 'type': 'bool', 'optional': False, 'description': 'If set, the total number of trades the account has participated in will be included in the response'}]
+Gets a history of trades
+
+GetTradeStatus v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'tradeid', 'type': 'uint64', 'optional': False}, {'name': 'get_descriptions', 'type': 'bool', 'optional': False, 'description': 'If set, the item display data for the items included in the returned trades will also be returned'}, {'name': 'language', 'type': 'string', 'optional': False, 'description': 'The language to use when loading item display data'}]
+Gets status for a specific trade
+
+GetTradeOffers v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'get_sent_offers', 'type': 'bool', 'optional': False, 'description': 'Request the list of sent offers.'}, {'name': 'get_received_offers', 'type': 'bool', 'optional': False, 'description': 'Request the list of received offers.'}, {'name': 'get_descriptions', 'type': 'bool', 'optional': False, 'description': "If set, the item display data for the items included in the returned trade offers will also be returned. If one or more descriptions can't be retrieved, then your request will fail."}, {'name': 'language', 'type': 'string', 'optional': False, 'description': 'The language to use when loading item display data.'}, {'name': 'active_only', 'type': 'bool', 'optional': False, 'description': 'Indicates we should only return offers which are still active, or offers that have changed in state since the time_historical_cutoff'}, {'name': 'historical_only', 'type': 'bool', 'optional': False, 'description': 'Indicates we should only return offers which are not active.'}, {'name': 'time_historical_cutoff', 'type': 'uint32', 'optional': False, 'description': 'When active_only is set, offers updated since this time will also be returned. When historical_only is set, only offers updated since this time are included.'}, {'name': 'cursor', 'type': 'uint32', 'optional': True, 'description': 'Cursor aka start index'}]
+Get a list of sent or received trade offers
+
+GetTradeOffer v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'tradeofferid', 'type': 'uint64', 'optional': False}, {'name': 'language', 'type': 'string', 'optional': False}, {'name': 'get_descriptions', 'type': 'bool', 'optional': False, 'description': "If set, the item display data for the items included in the returned trade offers will also be returned. If one or more descriptions can't be retrieved, then your request will fail."}]
+Gets a specific trade offer
+
+GetTradeOffersSummary v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'time_last_visit', 'type': 'uint32', 'optional': False, 'description': 'The time the user last visited.  If not passed, will use the time the user last visited the trade offer page.'}]
+Get counts of pending and new trade offers
+
+GetTradeHoldDurations v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid_target', 'type': 'uint64', 'optional': False, 'description': 'User you are trading with'}, {'name': 'trade_offer_access_token', 'type': 'string', 'optional': False, 'description': 'A special token that allows for trade offers from non-friends.'}]
+Returns the estimated hold duration and end date that a trade with a user would have
+
+49) IGameNotificationsService
+UserCreateSession v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'The appid to create the session for.'}, {'name': 'context', 'type': 'uint64', 'optional': False, 'description': 'Game-specified context value the game can used to associate the session with some object on their backend.'}, {'name': 'title', 'type': '{message}', 'optional': False, 'description': "The title of the session to be displayed within each user's list of sessions."}, {'name': 'users', 'type': '{message}', 'optional': False, 'description': 'The initial state of all users in the session.'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': '(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user.'}]
+Creates an async game session
+
+UserUpdateSession v1 - [{'name': 'sessionid', 'type': 'uint64', 'optional': False, 'description': 'The sessionid to update.'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'The appid of the session to update.'}, {'name': 'title', 'type': '{message}', 'optional': False, 'description': '(Optional) The new title of the session.  If not specified, the title will not be changed.'}, {'name': 'users', 'type': '{message}', 'optional': False, 'description': '(Optional) A list of users whose state will be updated to reflect the given state. If the users are not already in the session, they will be added to it.'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': '(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user.'}]
+Updates an async game session
+
+UserDeleteSession v1 - [{'name': 'sessionid', 'type': 'uint64', 'optional': False, 'description': 'The sessionid to delete.'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'The appid of the session to delete.'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': '(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session.'}]
+Deletes an async game session
+
+50) IInventoryService
+SplitItemStack v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'appid', 'type': 'uint32', 'optional': False}, {'name': 'itemid', 'type': 'uint64', 'optional': False}, {'name': 'quantity', 'type': 'uint32', 'optional': False}, {'name': 'steamid', 'type': 'uint64', 'optional': False}]
+Split an item stack into two stacks
+
+CombineItemStacks v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'appid', 'type': 'uint32', 'optional': False}, {'name': 'fromitemid', 'type': 'uint64', 'optional': False}, {'name': 'destitemid', 'type': 'uint64', 'optional': False}, {'name': 'quantity', 'type': 'uint32', 'optional': False}, {'name': 'steamid', 'type': 'uint64', 'optional': False}]
+Combine two stacks of items
+
+GetPriceSheet v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'ecurrency', 'type': 'int32', 'optional': False}, {'name': 'currency_code', 'type': 'string', 'optional': False, 'description': 'Standard short code of the requested currency (preferred)'}]
+Get the Inventory Service price sheet
+
+51) IWishlistService
+GetWishlistSortedFiltered v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False}, {'name': 'context', 'type': '{message}', 'optional': False}, {'name': 'data_request', 'type': '{message}', 'optional': False, 'description': 'If passed, item data will be returned'}, {'name': 'sort_order', 'type': '{enum}', 'optional': True}, {'name': 'filters', 'type': '{message}', 'optional': False}, {'name': 'start_index', 'type': 'int32', 'optional': True, 'description': 'Data in this range will be filled in with StoreBrowse data'}, {'name': 'page_size', 'type': 'int32', 'optional': True}]
+Get a user's paginated wishlist applying various sorts and filters
+
+GetWishlist v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False}]
+Get a user's wishlist.
+
+GetWishlistItemCount v1 - [{'name': 'steamid', 'type': 'uint64', 'optional': False}]
+Get the number of items on a user's wishlist.
+
+52) IStoreService
+GetAppList v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'if_modified_since', 'type': 'uint32', 'optional': True, 'description': 'Return only items that have been modified since this date.'}, {'name': 'have_description_language', 'type': 'string', 'optional': True, 'description': 'Return only items that have a description in this language.'}, {'name': 'include_games', 'type': 'bool', 'optional': True, 'description': 'Include games (defaults to enabled)'}, {'name': 'include_dlc', 'type': 'bool', 'optional': True, 'description': 'Include DLC'}, {'name': 'include_software', 'type': 'bool', 'optional': True, 'description': 'Include software items'}, {'name': 'include_videos', 'type': 'bool', 'optional': True, 'description': 'Include videos and series'}, {'name': 'include_hardware', 'type': 'bool', 'optional': True, 'description': 'Include hardware'}, {'name': 'last_appid', 'type': 'uint32', 'optional': True, 'description': 'For continuations, this is the last appid returned from the previous call.'}, {'name': 'max_results', 'type': 'uint32', 'optional': True, 'description': 'Number of results to return at a time.  Default 10k, max 50k.'}]
+Gets a list of apps available on the Steam Store.
+
+53) IHelpRequestLogsService
+UploadUserApplicationLog v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False}, {'name': 'log_type', 'type': 'string', 'optional': False}, {'name': 'version_string', 'type': 'string', 'optional': False}, {'name': 'log_contents', 'type': 'string', 'optional': False}, {'name': 'request_id', 'type': 'uint64', 'optional': False}]
+User uploading application logs
+
+GetApplicationLogDemand v1 - [{'name': 'appid', 'type': 'uint32', 'optional': False}]
+Returns whether the server would like the user to upload logs
+
+54) ICheatReportingService
+ReportCheatData v1 - [{'name': 'key', 'type': 'string', 'optional': False, 'description': 'Access key'}, {'name': 'steamid', 'type': 'uint64', 'optional': False, 'description': 'steamid of the user running and reporting the cheat.'}, {'name': 'appid', 'type': 'uint32', 'optional': False, 'description': 'The appid.'}, {'name': 'pathandfilename', 'type': 'string', 'optional': False, 'description': 'path and file name of the cheat executable.'}, {'name': 'webcheaturl', 'type': 'string', 'optional': False, 'description': 'web url where the cheat was found and downloaded.'}, {'name': 'time_now', 'type': 'uint64', 'optional': False, 'description': 'local system time now.'}, {'name': 'time_started', 'type': 'uint64', 'optional': False, 'description': 'local system time when cheat process started. ( 0 if not yet run )'}, {'name': 'time_stopped', 'type': 'uint64', 'optional': False, 'description': 'local system time when cheat process stopped. ( 0 if still running )'}, {'name': 'cheatname', 'type': 'string', 'optional': False, 'description': 'descriptive name for the cheat.'}, {'name': 'game_process_id', 'type': 'uint32', 'optional': False, 'description': 'process ID of the running game.'}, {'name': 'cheat_process_id', 'type': 'uint32', 'optional': False, 'description': 'process ID of the cheat process that ran'}, {'name': 'cheat_param_1', 'type': 'uint64', 'optional': False, 'description': 'cheat param 1'}, {'name': 'cheat_param_2', 'type': 'uint64', 'optional': False, 'description': 'cheat param 2'}, {'name': 'cheat_data_dump', 'type': 'string', 'optional': False, 'description': 'data collection in json format'}]
+Reports cheat data. Only use on test account that is running the game but not in a multiplayer session.
+

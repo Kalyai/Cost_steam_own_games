@@ -7,6 +7,9 @@ WORKDIR /app
 # Копируем все файлы проекта в контейнер
 COPY . /app
 
+# Копируем файл .env.secret
+COPY .env.secret /app/.env.secret
+
 # Устанавливаем зависимости из requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 

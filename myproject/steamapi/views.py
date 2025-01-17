@@ -5,7 +5,7 @@ from pathlib import Path
 
 from django.http import JsonResponse
 from dotenv import load_dotenv
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -16,6 +16,9 @@ import requests
 
 load_dotenv(dotenv_path=Path('../..') / '.env.secret', override=True)
 API_KEY = os.environ.get('API_KEY')
+
+def home_redirect(request):
+    return redirect('/api/index')
 
 def index_view(request):
     return render(request, 'index.html')

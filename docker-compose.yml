@@ -1,0 +1,31 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env.secret
+    depends_on:
+      - db
+    command: >
+      sh -c "python myproject/manage.py migrate &&
+             python myproject/manage.py collectstatic --noinput &&
+             python myproject/manage.py runserver 0.0.0.0:8000"
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: kss
+      POSTGRES_PASSWORD: Kalyai0007
+      POSTGRES_DB: SteamToolsProject
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
